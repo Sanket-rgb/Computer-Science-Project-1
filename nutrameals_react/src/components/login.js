@@ -42,6 +42,7 @@ class Login extends Component{
                 redirect : true,
             });
             if(response.status===200 && response.data === "Login Successful"){
+                localStorage.setItem('userData',this.state.loginDetails.userName);
                 this.props.history.push("/");
             }
             console.log(response);

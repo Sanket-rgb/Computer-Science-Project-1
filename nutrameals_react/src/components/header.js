@@ -7,6 +7,7 @@ import Help from '../assets/img/help.png';
 import Wallet from '../assets/img/wallet.png';
 import { slide as Menu } from 'react-burger-menu';
 import './header.css';
+import { withRouter } from "react-router-dom";
 
 class Header extends Component {
     constructor (props) {
@@ -14,8 +15,12 @@ class Header extends Component {
         this.state = {
           menuOpen: false
         }
-      }
+       // console.log("Header props"+props);  
+        //console.log(this.state);
+        //console.log(this.props.location.pathname);
+    }
     
+
     handleStateChange (state) {
         this.setState({menuOpen: state.isOpen})  
     }
@@ -29,6 +34,8 @@ class Header extends Component {
     }
 
 	render() {
+        const userData = localStorage.getItem('userData');
+        console.log(userData);
 		return (
 			<header id="header" className="fixed-top d-flex align-items-cente">
                     <div className="container-fluid container-xl d-flex align-items-center justify-content-lg-between">

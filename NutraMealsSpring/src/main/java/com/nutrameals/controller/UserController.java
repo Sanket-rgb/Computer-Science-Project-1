@@ -16,11 +16,6 @@ public class UserController {
 	@Autowired
 	UserService userService; 
 	
-	/*@GetMapping(path="/login")
-	public String login(@RequestBody User user) {
-	  return userService.login(user.getUsername(), user.getPassword());
-	}*/
-	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(@RequestBody LoginDTO loginDTO) {
 	 if(loginDTO.getUserName() != null && loginDTO.getPassword() != null) {
