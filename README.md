@@ -1,4 +1,4 @@
-**NutraMeals**(Food Delivery Application)
+**NutraMeals**(Online Food Delivery Application)
 
 **Background**
 People have been through difficult times during the pandemic with the lockdown and testing positive for covid, which has severe impact on one’s health. This has brought into limelight the importance of eating good food and building immunity to safeguard oneself.
