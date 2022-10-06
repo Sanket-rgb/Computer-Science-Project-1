@@ -32,4 +32,13 @@ public class UserController {
 	 }
 	 return null;
 	}
+	
+	@RequestMapping(value = "/viewAccount", method = RequestMethod.POST)
+	public User viewAccount(@RequestBody LoginDTO loginDTO) {
+	 if(loginDTO.getUserName() != null) {
+		 return userService.viewAccount(loginDTO);
+	 }
+	 return null;
+	}
+	
 }
