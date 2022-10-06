@@ -20,4 +20,8 @@ public class UserService {
 	public String signUp(User user) {
 		return userDAO.signUp(user);
 	}
+
+	public User viewAccount(LoginDTO loginDTO) {
+		return userDAO.viewAccount(loginDTO);
+	}
 }

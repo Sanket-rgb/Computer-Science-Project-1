@@ -23,6 +23,8 @@ public class MainApplication {
 				registry.addMapping("/restaurantList").allowedOrigins("http://localhost:3000");
 				registry.addMapping("/searchRestaurant").allowedOrigins("http://localhost:3000");
 				registry.addMapping("/addRestaurant").allowedOrigins("http://localhost:3000");
+				registry.addMapping("/viewAccount").allowedOrigins("http://localhost:3000");
+				
 			}
 		};
 	}

@@ -32,4 +32,13 @@ public class UserDAO {
 		}
 		return null;
 	}
+
+	public User viewAccount(LoginDTO loginDTO) {
+        User user = userRepository.findByUserName(loginDTO.getUserName());
+		
+		if(user == null) {
+            throw new RuntimeException("User does not exist.");
+        }
+        return user;
+	}
 }
