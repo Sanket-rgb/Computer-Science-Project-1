@@ -17,7 +17,7 @@ public class UserController {
 	UserService userService; 
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login(@RequestBody LoginDTO loginDTO) {
+	public User login(@RequestBody LoginDTO loginDTO) {
 	 if(loginDTO.getUserName() != null && loginDTO.getPassword() != null) {
 		 return userService.login(loginDTO);
 	 }
