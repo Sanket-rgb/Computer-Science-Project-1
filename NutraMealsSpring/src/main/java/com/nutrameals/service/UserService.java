@@ -13,7 +13,7 @@ public class UserService {
 	@Autowired
 	UserDAO userDAO;
 	
-	public String login(LoginDTO loginDTO) {
+	public User login(LoginDTO loginDTO) {
 		return userDAO.login(loginDTO);
 	}
 	

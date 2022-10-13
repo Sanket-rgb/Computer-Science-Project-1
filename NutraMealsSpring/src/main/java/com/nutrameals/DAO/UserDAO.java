@@ -13,7 +13,7 @@ public class UserDAO {
 	@Autowired
 	UserRepository userRepository;
 	
-	public String login(LoginDTO loginDTO) {
+	public User login(LoginDTO loginDTO) {
 		User user = userRepository.findByUserName(loginDTO.getUserName());
 		
 		if(user == null) {
@@ -22,7 +22,7 @@ public class UserDAO {
         if(!user.getPassword().equals(loginDTO.getPassword())){
             throw new RuntimeException("Password mismatch.");
         }
-        return "Login Successful";
+        return user;
 	}
 
 	public String signUp(User user) {
