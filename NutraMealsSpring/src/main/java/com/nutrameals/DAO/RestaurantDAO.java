@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.nutrameals.DTO.IRestaurantFoodItem;
 import com.nutrameals.DTO.SearchRestaurantDTO;
 import com.nutrameals.model.Restaurant;
 import com.nutrameals.repository.RestaurantRepository;
@@ -40,6 +41,13 @@ public class RestaurantDAO {
 		if(restaurant.getRestaurantName() != null) {
 			restaurantRepository.save(restaurant);
 			return "Restaurant added successfully";
+		}
+		return null;
+	}
+	
+	public IRestaurantFoodItem searchByMenuItem(String menuItem) {
+		if(menuItem != null) {
+			return restaurantRepository.findByMenuItems(menuItem);
 		}
 		return null;
 	}
